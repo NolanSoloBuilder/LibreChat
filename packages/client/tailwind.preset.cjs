@@ -20,6 +20,19 @@ module.exports = {
         'theme-control-touch': 'max(var(--theme-control-height, 2.25rem), 2.75rem)',
       },
       borderRadius: {
+        /**
+         * Tailwind 4 renamed the radius steps: the old `sm` (0.125rem) is now
+         * `xs`, and `sm` means 0.25rem. Every published primitive that says
+         * `rounded-sm` — the checkbox, the menu items, the resize grips — would
+         * double its corners for a consumer who upgrades Tailwind under it, so
+         * the three named steps are pinned to the values this preset produced
+         * before, each still overridable through `--radius` for a theme that
+         * wants different corners. The SPA sets `--radius: 0.5rem` and its own
+         * config restates the same family, so nothing there moves either.
+         */
+        lg: 'var(--radius, 0.5rem)',
+        md: 'calc(var(--radius, 0.5rem) - 2px)',
+        sm: 'calc(var(--radius, 0.375rem) - 4px)',
         'theme-control': 'var(--theme-control-radius, 0.75rem)',
         'theme-control-round': 'var(--theme-round-control-radius, 9999px)',
         'theme-surface': 'var(--theme-surface-radius, 1rem)',
