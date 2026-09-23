@@ -1,0 +1,548 @@
+{
+  "source": "https://www.ashleyfurniture.com/c/furniture/living-room/sofas/beige/",
+  "data_mode": "public_website_snapshot",
+  "products": [
+    {
+      "official_sku": "3100438",
+      "name": "Mahoney Sofa",
+      "brand": "Signature Design by Ashley®",
+      "color": "Pebble",
+      "width_in": 75,
+      "width_cm": 190.5,
+      "images": [
+        "https://cdn.ashley.com/assets/31004-38-HEAD-ON-SW-AGR.jpg",
+        "https://cdn.ashley.com/assets/31004-38-AGR.jpg",
+        "https://cdn.ashley.com/assets/31004-38-ANGLE-SW-AGR.jpg"
+      ],
+      "public_price": 349.99,
+      "public_currency": "USD",
+      "source_url": "https://www.ashleyfurniture.com/p/mahoney_sofa/3100438.html",
+      "collected_at": "2026-09-20T08:34:53.665399+00:00",
+      "source_hash": "00bebe6ce4bb2d75363c06462fd6c8255a481eba8763770b173a80b546337b5e",
+      "notice": "Public US website snapshot; prices depend on location/date. No inference about China inventory or procurement costs."
+    },
+    {
+      "official_sku": "2430538",
+      "name": "Aviemore Sofa",
+      "brand": "Ashley",
+      "color": "Stone",
+      "width_in": 85,
+      "width_cm": 215.9,
+      "public_price": 399.99,
+      "public_currency": "USD",
+      "source_url": "https://www.ashleyfurniture.com/p/aviemore_sofa/2430538.html",
+      "images": [
+        "https://cdn.ashley.com/assets/24305-38-HEAD-ON-SW-AGR.jpg"
+      ],
+      "collected_at": "2026-09-20T08:34:53.669548+00:00",
+      "collection_method": "Public product page readback; image URL from official product/category page",
+      "notice": "US public snapshot; location/date dependent. Enterprise economics and supply are simulated."
+    },
+    {
+      "official_sku": "6330789",
+      "name": "Lavenhorne Manual Reclining Sofa with Drop Down Table",
+      "brand": "Ashley",
+      "color": null,
+      "width_in": 87,
+      "width_cm": 220.98,
+      "public_price": 599.99,
+      "public_currency": "USD",
+      "source_url": "https://www.ashleyfurniture.com/p/lavenhorne_reclining_sofa_with_drop_down_table/6330789.html",
+      "images": [
+        "https://cdn.ashley.com/assets/63307-89-HEAD-ON-SW-AGR.jpg"
+      ],
+      "collected_at": "2026-09-20T08:34:53.669559+00:00",
+      "collection_method": "Public product page readback; image URL from official product/category page",
+      "notice": "US public snapshot; location/date dependent. Enterprise economics and supply are simulated."
+    },
+    {
+      "official_sku": "5200338",
+      "name": "Maggie Sofa",
+      "brand": "Ashley",
+      "color": null,
+      "width_in": 96,
+      "width_cm": 243.84,
+      "public_price": 699.99,
+      "public_currency": "USD",
+      "source_url": "https://www.ashleyfurniture.com/p/maggie_sofa/5200338.html",
+      "images": [
+        "https://cdn.ashley.com/assets/52003-38-HEAD-ON-SW-AGR.jpg"
+      ],
+      "collected_at": "2026-09-20T08:34:53.669563+00:00",
+      "collection_method": "Public product page readback; image URL from official product/category page",
+      "notice": "US public snapshot; location/date dependent. Enterprise economics and supply are simulated."
+    },
+    {
+      "official_sku": "2170838",
+      "name": "Santorine Leather Sofa",
+      "brand": "Ashley",
+      "color": null,
+      "width_in": 85,
+      "width_cm": 215.9,
+      "public_price": 749.99,
+      "public_currency": "USD",
+      "source_url": "https://www.ashleyfurniture.com/p/santorine_sofa/2170838.html",
+      "images": [
+        "https://cdn.ashley.com/assets/21708-38-HEAD-ON-SW-P1-KO.jpg"
+      ],
+      "collected_at": "2026-09-20T08:34:53.669565+00:00",
+      "collection_method": "Public product page readback; image URL from official product/category page",
+      "notice": "US public snapshot; location/date dependent. Enterprise economics and supply are simulated."
+    },
+    {
+      "official_sku": "50205S5",
+      "name": "Larce 2-Piece Sectional with Chaise",
+      "brand": null,
+      "color": "Stone,Dune",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "1399.98",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/50205-55-17-HEAD-ON-SW-AGR.jpg",
+        "https://cdn.ashley.com/assets/50205-55-17-SW-P1-KO.jpg",
+        "https://cdn.ashley.com/assets/50205-55-17.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/larce_2-piece_sectional_with_chaise/50205S5.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    },
+    {
+      "official_sku": "7780538",
+      "name": "Hartmoor Sofa",
+      "brand": null,
+      "color": "Pearl",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "599.99",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/77805-38-HEAD-ON-SW-AGR.jpg",
+        "https://cdn.ashley.com/assets/77805-38-HEAD-ON-SW-P1-KO.jpg",
+        "https://cdn.ashley.com/assets/77805-38-4X3-CROP.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/hartmoor_sofa/7780538.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    },
+    {
+      "official_sku": "2420338",
+      "name": "SimpleJoy Sofa",
+      "brand": null,
+      "color": "Sand",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "349.99",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/24203-38-HEAD-ON-SW-AGR.jpg",
+        "https://cdn.ashley.com/assets/24203-38-HEAD-ON-SW-P1-KO.jpg",
+        "https://cdn.ashley.com/assets/24203-38.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/simplejoy_sofa/2420338.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    },
+    {
+      "official_sku": "5950418",
+      "name": "Stonemeade Sofa Chaise",
+      "brand": null,
+      "color": "Taupe",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "499.99",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/59504-18-HEAD-ON-SW-AGR.jpg",
+        "https://cdn.ashley.com/assets/59504-18.jpg",
+        "https://cdn.ashley.com/assets/59504-BODY-A-SWATCH-500.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/stonemeade_sofa_chaise/5950418.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    },
+    {
+      "official_sku": "7970238",
+      "name": "Belcaro Place Sofa",
+      "brand": null,
+      "color": "",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "549.99",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/79702-38-HEAD-ON-SW-AGR.jpg",
+        "https://cdn.ashley.com/assets/79702-38-HEAD-ON-SW-P1-KO.jpg",
+        "https://cdn.ashley.com/assets/79702-38.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/belcaro_place_sofa/7970238.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    },
+    {
+      "official_sku": "76606S2",
+      "name": "Cavella 3-Piece Sectional Sofa",
+      "brand": null,
+      "color": "",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "1999.98",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/76606-64-46-65-SW-AGR.jpg",
+        "https://cdn.ashley.com/assets/76606-64-46-65-SW-P1-KO.jpg",
+        "https://cdn.ashley.com/assets/76606-64-46-65-4X3-CROP.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/cavella_3-piece_sectional_sofa/76606S2.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    },
+    {
+      "official_sku": "43403S4",
+      "name": "Omaha by Ashley 3-Piece Sectional Sofa",
+      "brand": null,
+      "color": "Stone",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "1399.98",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/43403-64-46-65-SW-P1-KO.jpg",
+        "https://cdn.ashley.com/assets/43402-BODY-A-SWATCH-500.jpg",
+        "https://cdn.ashley.com/assets/43402-64-46-65-SW-P1-KO.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/omaha_by_ashley_3-piece_sectional_sofa/43403S4.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    },
+    {
+      "official_sku": "39402S3",
+      "name": "Elissa Court 3-Piece Sectional Sofa with Chaise",
+      "brand": null,
+      "color": "Vanilla",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "1899.98",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/39402-64-46-17-HEAD-ON-SW-AGR.jpg",
+        "https://cdn.ashley.com/assets/39402-64-46-17-HEAD-ON-SW-AGR-P1-KO.jpg",
+        "https://cdn.ashley.com/assets/39402-64-46-17-4X3-CROP.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/elissa_court_3-piece_sectional_sofa_with_chaise/39402S3.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    },
+    {
+      "official_sku": "21104S12",
+      "name": "Lindyn 3-Piece Sectional with Chaise",
+      "brand": null,
+      "color": "Ivory",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "1999.98",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/21105-64-46-17.jpg",
+        "https://cdn.ashley.com/assets/21105-64-46-17-SW-P1-KO.jpg",
+        "https://cdn.ashley.com/assets/21105-64-46-17-4X3-CROP.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/lindyn_3-piece_sectional_with_chaise/21105S9.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    },
+    {
+      "official_sku": "2920338",
+      "name": "Storrow Sofa",
+      "brand": null,
+      "color": "Stone",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "499.99",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/29203-38-HEAD-ON-SW-AGR.jpg",
+        "https://cdn.ashley.com/assets/29203-38-HEAD-ON-SW-P1-KO.jpg",
+        "https://cdn.ashley.com/assets/29203-38-4X3-CROP.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/storrow_sofa/2920338.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    },
+    {
+      "official_sku": "92103S2",
+      "name": "Modmax 3-Piece Sectional",
+      "brand": null,
+      "color": "Oyster",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "1099.98",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/92103-64-46-65.jpg",
+        "https://cdn.ashley.com/assets/92103-64-46-65-HEAD-ON-SW-P1-KO.jpg",
+        "https://cdn.ashley.com/assets/92102-BODY-A-SWATCH-500.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/modmax_3-piece_sectional/92103S2.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    },
+    {
+      "official_sku": "5950438",
+      "name": "Stonemeade Sofa",
+      "brand": null,
+      "color": "Taupe",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "449.99",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/59505-38-HEAD-ON-SW-AGR.jpg",
+        "https://cdn.ashley.com/assets/59504-38-HEAD-ON-SW-AGR.jpg",
+        "https://cdn.ashley.com/assets/59504-38.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/stonemeade_sofa/5950438.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    },
+    {
+      "official_sku": "9510438",
+      "name": "Soletren Sofa",
+      "brand": null,
+      "color": "Stone",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "799.99",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/95104-38-HEAD-ON-SW-AGR.jpg",
+        "https://cdn.ashley.com/assets/95104-38-HEAD-ON-SW-P1-KO.jpg",
+        "https://cdn.ashley.com/assets/95104-38-SET.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/soletren_sofa/9510438.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    },
+    {
+      "official_sku": "5360339",
+      "name": "Rannis Sofa Sleeper",
+      "brand": null,
+      "color": "Snow",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "799.99",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/53602-39-HEAD-ON-SW-AGR.jpg",
+        "https://cdn.ashley.com/assets/53603-39-HEAD-ON-SW-P1-KO.jpg",
+        "https://cdn.ashley.com/assets/53603-39-OPEN-ALT.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/rannis_queen_sofa_sleeper/5360339.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    },
+    {
+      "official_sku": "3880581",
+      "name": "Danum Reclining Sofa",
+      "brand": null,
+      "color": "Stone",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "699.94",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/38805-81-HEAD-ON-SW-AGR.jpg",
+        "https://cdn.ashley.com/assets/38805-81-HEAD-ON-SW-P1-KO.jpg",
+        "https://cdn.ashley.com/assets/38805-81-CLSD.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/danum_reclining_sofa/3880581.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    },
+    {
+      "official_sku": "39402S2",
+      "name": "Elissa Court 3-Piece Sectional Sofa",
+      "brand": null,
+      "color": "",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "1699.98",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/39402-64-46-65-HEAD-ON-SW-AGR.jpg",
+        "https://cdn.ashley.com/assets/39402-64-46-65-SW-P1-KO.jpg",
+        "https://cdn.ashley.com/assets/39402-64-46-65-4X3-CROP.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/elissa_court_3-piece_sectional_sofa/39402S2.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    },
+    {
+      "official_sku": "3120138",
+      "name": "Alesandra Sofa",
+      "brand": null,
+      "color": "",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "999.99",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/3120138-NO-PILLOWS-SW_AGR.jpg",
+        "https://cdn.ashley.com/assets/31201-38-HEAD-ON-SW-P1-KO.jpg",
+        "https://cdn.ashley.com/assets/31201-38-SET-10X8-CROP.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/alesandra_sofa/3120138.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    },
+    {
+      "official_sku": "77901S5",
+      "name": "Barrelton 3-Piece Sectional with Chaise",
+      "brand": null,
+      "color": "Barley",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "2199.98",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/77901-16-46-65-4X3-CROP.jpg",
+        "https://cdn.ashley.com/assets/77901-16-46-65-SW-P1-KO.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/barrelton_3-piece_sectional_with_chaise/77901S5.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    },
+    {
+      "official_sku": "2430539",
+      "name": "Aviemore Sofa Sleeper",
+      "brand": null,
+      "color": "Stone",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "699.99",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/24303-38-HEAD-ON-SW-AGR.jpg",
+        "https://cdn.ashley.com/assets/24305-38-HEAD-ON-SW-AGR.jpg",
+        "https://cdn.ashley.com/assets/24305-39-AGR.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/aviemore_queen_sofa_sleeper/2430539.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    },
+    {
+      "official_sku": "U600002668",
+      "name": "Jennifer Taylor Home Knox Knox Sofa",
+      "brand": null,
+      "color": "French Beige",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "1242.99",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/U600002668_1.jpg",
+        "https://cdn.ashley.com/assets/U600002668_2.jpg",
+        "https://cdn.ashley.com/assets/U600002697_3.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/jennifer_taylor_home_knox_knox_sofa/U600002668.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    },
+    {
+      "official_sku": "2200315",
+      "name": "Next-Gen Durapella Power Reclining Sofa",
+      "brand": null,
+      "color": "Sand",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "1999.99",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/2200315_AGR.jpg",
+        "https://cdn.ashley.com/assets/22003-15-HEAD-ON-SW-P1-KO.jpg",
+        "https://cdn.ashley.com/assets/22003-SWATCH-BODY-A-500.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/next-gen_durapella_power_reclining_sofa/2200315.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    },
+    {
+      "official_sku": "U600004251",
+      "name": "HOMLUX Convertible Sleeper Sofa",
+      "brand": null,
+      "color": "Beige,Tan",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "374.99",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/U600004251_1.jpg",
+        "https://cdn.ashley.com/assets/U600004251_2.jpg",
+        "https://cdn.ashley.com/assets/U600004247_3.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/homlux_convertible_full_sleeper_sofa/U600004251.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    },
+    {
+      "official_sku": "7360938",
+      "name": "Calden Sofa",
+      "brand": null,
+      "color": "Caramel",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "1899.99",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/73609-38-HEAD-ON-SW-P1-KO.jpg",
+        "https://cdn.ashley.com/assets/73609-38-T985-HEAD-ON-1x1.jpg",
+        "https://cdn.ashley.com/assets/73609-SWATCH-500.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/calden_sofa/7360938.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    },
+    {
+      "official_sku": "2920339",
+      "name": "Storrow Sofa Sleeper",
+      "brand": null,
+      "color": "Stone",
+      "width_cm": null,
+      "width_in": null,
+      "public_price": "799.99",
+      "public_currency": "USD",
+      "images": [
+        "https://cdn.ashley.com/assets/29203-38-HEAD-ON-SW-AGR.jpg",
+        "https://cdn.ashley.com/assets/29203-38-HEAD-ON-SW-P1-KO.jpg",
+        "https://cdn.ashley.com/assets/29203-39-SLPR-4X3-CROP.jpg"
+      ],
+      "source_url": "https://www.ashleyfurniture.com/p/storrow_queen_sofa_sleeper/2920339.html",
+      "collected_at": "2026-09-20T08:29:15.111984+00:00",
+      "collection_method": "Official category HTML snapshot; dimensions unavailable",
+      "notice": "Public listing facts; operational dimensions and enterprise data are simulated where absent."
+    }
+  ]
+}

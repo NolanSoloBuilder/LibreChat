@@ -1,3 +1,4 @@
+import { getUIActionDisplayText } from '~/utils/uiActionPresentation';
 import { Suspense, useMemo, Fragment } from 'react';
 import { useRecoilValue } from 'recoil';
 import { DelayedRender } from '@librechat/client';
@@ -132,7 +133,13 @@ const SearchContent = ({
       )}
       dir="auto"
     >
-      <MarkdownLite content={message.text || ''} />
+      <MarkdownLite
+        content={
+          (message.isCreatedByUser && getUIActionDisplayText(message.text || '')) ||
+          message.text ||
+          ''
+        }
+      />
     </div>
   );
 };

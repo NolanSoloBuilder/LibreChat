@@ -1,3 +1,4 @@
+import { formatUIActionMessage } from './uiActionPresentation';
 import React from 'react';
 import type { UIActionResult } from '@mcp-ui/client';
 import { TAskFunction } from '~/common';
@@ -145,6 +146,12 @@ export const handleUIAction = async (result: UIActionResult, ask: TAskFunction) 
   const { type, payload } = result;
 
   if (!supportedTypes.includes(type)) {
+    return;
+  }
+
+  const displayText = (payload as { displayText?: unknown }).displayText;
+  if (typeof displayText === 'string' && displayText.trim() && displayText.length <= 256) {
+    ask({ text: formatUIActionMessage(result, displayText) });
     return;
   }
 

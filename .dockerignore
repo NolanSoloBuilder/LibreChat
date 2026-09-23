@@ -13,5 +13,9 @@ librechat*
 Dockerfile*
 docs
 
+# Local development configuration and credentials must never enter release images.
+/data/local-runtime/
+/scripts/codewiz-dev/
+
 # Ignore all hidden files
 .*

@@ -3,6 +3,8 @@ import { UIResourceRenderer as LegacyUIResourceRenderer } from '@mcp-ui/client';
 import type { UIResource } from 'librechat-data-provider';
 import UIResourceRenderer from '../Renderer';
 
+jest.mock('~/Providers', () => ({ useOptionalMessagesOperations: () => ({ getMessages: () => [] }) }));
+
 jest.mock('@mcp-ui/client', () => ({
   UIResourceRenderer: jest.fn(({ resource }) => (
     <div data-testid="legacy-ui-resource" data-mime-type={resource.mimeType} />
@@ -95,4 +97,46 @@ describe('UIResourceRenderer', () => {
       expect.any(Object),
     );
   });
+});
+
+it('bridges resolved theme on load and theme updates without replacing card HTML', () => {
+  const React = require('react');
+  const { ThemeContext } = require('@librechat/client');
+  const { fireEvent } = require('@testing-library/react');
+  mockLegacyRenderer.mockImplementation(({ htmlProps }: any) => (
+    <iframe
+      title="test-card"
+      ref={htmlProps?.iframeProps?.ref}
+      onLoad={htmlProps?.iframeProps?.onLoad}
+    />
+  ));
+  const resource = {
+    resourceId: 'theme',
+    uri: 'ui://ashley-selection/test',
+    mimeType: 'text/html',
+    text: '<html><body>card</body></html>',
+  };
+  function Card({ mode }: { mode: string }) {
+    const defaults = React.useContext(ThemeContext);
+    return (
+      <ThemeContext.Provider value={{ ...defaults, resolvedMode: mode }}>
+        <UIResourceRenderer resource={resource} />
+      </ThemeContext.Provider>
+    );
+  }
+  const { rerender } = render(<Card mode="dark" />);
+  const iframe = screen.getByTitle('test-card') as HTMLIFrameElement;
+  const post = jest.spyOn(iframe.contentWindow!, 'postMessage');
+  fireEvent.load(iframe);
+  expect(post).toHaveBeenLastCalledWith(
+    expect.objectContaining({ payload: expect.objectContaining({ theme: 'dark' }) }),
+    '*',
+  );
+  const html = (mockLegacyRenderer.mock.calls.at(-1)?.[0].resource as UIResource).text;
+  rerender(<Card mode="light" />);
+  expect(post).toHaveBeenLastCalledWith(
+    expect.objectContaining({ payload: expect.objectContaining({ theme: 'light' }) }),
+    '*',
+  );
+  expect((mockLegacyRenderer.mock.calls.at(-1)?.[0].resource as UIResource).text).toBe(html);
 });

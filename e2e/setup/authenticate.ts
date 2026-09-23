@@ -63,6 +63,9 @@ async function authenticate(config: FullConfig, user: User) {
     const conversationURL = appURL(baseURL, 'c/new');
     const loginURL = appURL(baseURL, 'login');
 
+    // The setup uses English selectors regardless of the host machine's locale.
+    await page.context().addCookies([{ name: 'lang', value: 'en', url: baseURL }]);
+
     // Set localStorage before navigating to the page
     await page.context().addInitScript(() => {
       localStorage.setItem('navVisible', 'true');

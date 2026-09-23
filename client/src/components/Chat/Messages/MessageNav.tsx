@@ -1,3 +1,4 @@
+import { getUIActionDisplayText } from '~/utils/uiActionPresentation';
 import { memo, useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import { createPortal } from 'react-dom';
 import { ChevronUp, ChevronDown } from 'lucide-react';
@@ -65,7 +66,7 @@ function rowText(node: HTMLElement): string {
 
 export function buildEntry(id: string, msg: TMessage, node?: HTMLElement): MessageEntry {
   const raw = msg.text?.trim() ? msg.text : extractPreviewFromContent(msg.content);
-  const trimmed = raw.trim();
+  const trimmed = (msg.isCreatedByUser ? (getUIActionDisplayText(raw) ?? raw) : raw).trim();
   /** Image-, tool-call- and reasoning-only messages carry no text part at all,
    *  so the message alone yields nothing to say. Their rendered body does say
    *  something, and reading it is what keeps a settled message from being

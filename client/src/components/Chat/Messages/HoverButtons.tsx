@@ -1,3 +1,4 @@
+import { getUIActionDisplayText } from '~/utils/uiActionPresentation';
 import React, { useState, useMemo, useCallback, memo } from 'react';
 import { Copy, Check } from 'lucide';
 import { useAtomValue } from 'jotai';
@@ -212,6 +213,9 @@ const HoverButtons = ({
   const { isCreatedByUser, error } = message;
   const isSubagentThreadReadOnly = conversation.subagentThread != null;
 
+  const isCardAction =
+    message.isCreatedByUser && getUIActionDisplayText(extractMessageContent(message)) != null;
+
   const onEdit = () => {
     if (isEditing) {
       return enterEdit(true);
@@ -229,7 +233,12 @@ const HoverButtons = ({
           index={index}
           isLast={isLast}
           messageId={message.messageId}
-          content={extractMessageContent(message)}
+          content={
+            message.isCreatedByUser
+              ? (getUIActionDisplayText(extractMessageContent(message)) ??
+                extractMessageContent(message))
+              : extractMessageContent(message)
+          }
           renderButton={(props) => (
             <HoverButton
               onClick={props.onClick}
@@ -264,7 +273,7 @@ const HoverButtons = ({
       )}
 
       {/* Edit Button */}
-      {!isSubagentThreadReadOnly && isEditableEndpoint && !hideEditButton && (
+      {!isCardAction && !isSubagentThreadReadOnly && isEditableEndpoint && !hideEditButton && (
         <HoverButton
           id={`edit-${message.messageId}`}
           onClick={onEdit}

@@ -1,0 +1,36 @@
+{
+  "release": "ashley-trial-20260923-6",
+  "created_at": "2026-09-23T12:09:00.230631+00:00",
+  "project": "cited-alpha-20260701",
+  "zone": "asia-southeast1-b",
+  "domain": "ashley.forgepane.com",
+  "source_commit": "3efc24a8655e8280205bf8f3f3e9378f96e3e621",
+  "source_archive": "gs://cited-alpha-20260701_cloudbuild/source/1790164660.234767-58e76ef5bda14e7eaf07a940ddac566f.tgz",
+  "build_id": "129d4e00-c954-427e-99df-bfd37d3130af",
+  "images": {
+    "app": "asia-southeast1-docker.pkg.dev/cited-alpha-20260701/ashley-trial/app@sha256:c0c1779acf1681e2d42f5ab81ccd0cfe3de5c35299814eb3c0e71078dbe5c314",
+    "caddy": "mirror.gcr.io/library/caddy@sha256:4c6e91c6ed0e2fa03efd5b44747b625fec79bc9cd06ac5235a779726618e530d",
+    "mongo": "mirror.gcr.io/library/mongo@sha256:098862b1339f031900ca66cf8fef799e616d6324fa41b9a263f2ec899552c1ef",
+    "meili": "mirror.gcr.io/getmeili/meilisearch@sha256:8b57fc3c7f46535ddef3828df1538465ac19d892eb57c9a10da6df0880bd5856",
+    "redis": "mirror.gcr.io/library/redis@sha256:bb186d083732f669da90be8b0f975a37812b15e913465bb14d845db72a4e3e08"
+  },
+  "dataset_version": "us-marketplace-pilot-2026-09-20-v1",
+  "source_file_sha256": {
+    "services/selection-demo/channel.mjs": "110b5de3c02690efa67e50896793ce4478e73f40f91171b44a377cc715e2966b",
+    "services/selection-demo/server.mjs": "e2ceac07a29dda502b94ad37fe8ada81dd96be27c386f755b3fc24a23373f93b",
+    "services/selection-demo/instructions.md": "758db9c683735da5bc1b1e5328f3ae25240f4f8ef5f0794347280620c8ea68a0",
+    "services/selection-demo/channel-ui.mjs": "b68109c2d54eab8236afcdf33453d8f18585d8ad0c04438982125b845d0d8d2a",
+    "services/selection-demo/public-search.mjs": "10b7b0f320d934c9f62a54cff3716b510664b84641e9d13c6aeb5cdc43c02c03",
+    "services/selection-demo/provision.mjs": "6b3d9f6feb1cc213ccb21ac13dc7f566a0868f04d591d829d78ff8b8f5b66b4f",
+    "packages/api/src/mcp/parsers.ts": "71e407d822e78dc3ec763912c436dbeae35758f1e7b131c258f30cf7ddf85cad",
+    "branding/ashley/librechat.yaml": "9821444f9af94f9c6d03ee9d0b90bcda9ae08ee3d29eb1a738d4b24eed5d9a68"
+  },
+  "source_state": "Cloud Build archive contains the image source snapshot. The mounted branding/ashley/librechat.yaml is a deployment override, verified by deployment_file_sha256.",
+  "deployment_file_sha256": {
+    "deploy/ashley/compose.yaml": "71b9c9dc8c0727e7bac329caf162a221dd646fd8eece48e7c4770afdff953d06",
+    "deploy/ashley/Caddyfile": "ac04c27a3b97ed364502ea348a7e610f8ac5ca59a39819b8e83f3aa9bb1f43f6",
+    "deploy/ashley/backup.sh": "6ba98aea5f96b3e4df942befbcf1e67fde4adc0239f8ac0aa22e188875e32c82",
+    "deploy/ashley/verify-backup.sh": "b2077159d7c16544f59e5f1378c546ca715e83b1319db494716b0a80f90315bf",
+    "branding/ashley/librechat.yaml": "17cead6f5be724a7c31583ca875fbbf38825fd162c94fe85215ea9f1c1c14bc4"
+  }
+}

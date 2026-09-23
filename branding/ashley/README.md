@@ -7,8 +7,8 @@
 在运行环境的 `.env` 设置：
 
 ```dotenv
-APP_TITLE=ASHLEY｜爱室丽选品工作台
-CUSTOM_FOOTER=[Ashley](https://www.ashleyfurniture.com/) · 爱室丽企业演示版
+APP_TITLE=Ashley Assortment Workspace
+CUSTOM_FOOTER=[Ashley](https://www.ashleyfurniture.com/) · Assortment Workspace
 ```
 
 将本目录 `librechat.yaml` 挂载到 `/app/librechat.yaml`。如果目标部署已有该配置，合并 `interface` 与 `modelSpecs`，不要覆盖既有工具或模型配置。
@@ -24,7 +24,7 @@ CUSTOM_FOOTER=[Ashley](https://www.ashleyfurniture.com/) · 爱室丽企业演�
 | icon.png | /app/client/dist/assets/favicon-32x32.png |
 | icon.png | /app/client/dist/assets/apple-touch-icon-180x180.png |
 
-图标直接使用官网 180px 原图，浏览器按展示尺寸缩放。配置调整后在仓库根运行 `data/local-runtime/run.sh up -d api`，再刷新网页。默认新对话采用 Ashley 选品助手显示预设，底层继续使用已配置的 Vertex AI Gemini；历史对话不重写。
+图标直接使用官网 180px 原图，浏览器按展示尺寸缩放。配置调整后在仓库根运行 `data/local-runtime/run.sh up -d api`，再刷新网页。Ashley 只表示产品品牌，供应商与模型保留真实身份。共享配置默认新对话显示 Gemini 3.1 Pro，底层继续使用已配置的 Vertex AI Gemini；本地开发覆盖配置显示 OpenAI / GPT-5.6 Luna，通过 Codewiz 代理调用。历史对话不重写。详见 [本地环境](../../docs/deployment/local.zh.md)。
 
 ## 素材来源
 
@@ -35,3 +35,5 @@ CUSTOM_FOOTER=[Ashley](https://www.ashleyfurniture.com/) · 爱室丽企业演�
 ## 验证
 
 2026-09-18：登录后的配置 API 返回定制标题、页脚与模型预设；HTTP 获取图标与原文件哈希一致；浏览器新对话页实测显示 Ashley 图标、选品助手名称、业务说明和企业演示版页脚，原 LibreChat 宣传页脚已移除。本次仅变更配置及静态素材，无需重建前端。
+
+2026-09-21：浏览器 favicon / Apple touch icon 统一引用 `client/public/assets/ashley-icon.png`（来自本目录 icon.png）；HTML 使用版本查询参数刷新缓存。选品顾问头像通过原生 `/api/files/images/agents/:id/avatar` 上传同一图片，持久化在 images 卷，provision.mjs 同步维护上传步骤。不要使用普通 agent PATCH 代替头像上传：当前运行镜像会忽略该字段。

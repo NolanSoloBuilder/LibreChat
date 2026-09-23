@@ -1,3 +1,4 @@
+import { formatUIActionMessage } from '~/utils/uiActionPresentation';
 import { RecoilRoot } from 'recoil';
 import copy from 'copy-to-clipboard';
 import { renderHook, act } from '@testing-library/react';
@@ -52,6 +53,22 @@ describe('useCopyMessageToClipboard', () => {
     options?.onCopy?.(clipboardData);
     return (clipboardData.setData.mock.calls[0]?.[1] ?? '') as string;
   };
+
+  it('copies only the card label while leaving execution parameters intact', () => {
+    const text = formatUIActionMessage(
+      { type: 'prompt', payload: { prompt: 'validation_id=private' } },
+      '选择方案2并申请保存',
+    );
+    const { result } = renderHook(
+      () => useCopyMessageToClipboard({ text, isCreatedByUser: true }),
+      {
+        wrapper: ({ children }: { children: ReactNode }) => <RecoilRoot>{children}</RecoilRoot>,
+      },
+    );
+    act(() => result.current(mockSetIsCopied));
+    expect(mockCopy.mock.calls[0][0]).toBe('选择方案2并申请保存');
+    expect(text).toContain('validation_id=private');
+  });
 
   it('copies an assistant message as html when the preference is on', () => {
     const { result } = renderWithSettings(

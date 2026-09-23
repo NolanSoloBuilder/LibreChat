@@ -1,0 +1,96 @@
+name: ashley-trial
+services:
+  caddy:
+    image: mirror.gcr.io/library/caddy@sha256:4c6e91c6ed0e2fa03efd5b44747b625fec79bc9cd06ac5235a779726618e530d
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - /srv/ashley/data/caddy:/data
+    depends_on:
+      - api
+    restart: unless-stopped
+    logging: &logging
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: '3'
+  api:
+    image: ${ASHLEY_IMAGE:?Set fixed Ashley image digest}
+    ports:
+      - '127.0.0.1:3080:3080'
+    env_file:
+      - /srv/ashley/runtime/app.env
+    environment:
+      HOST: 0.0.0.0
+      NODE_ENV: production
+      MONGO_URI: mongodb://root:${MONGO_PASSWORD}@mongodb:27017/LibreChat?authSource=admin
+      MEILI_HOST: http://meilisearch:7700
+      REDIS_URI: redis://:${REDIS_PASSWORD}@redis:6379
+      USE_REDIS: 'true'
+      USE_REDIS_STREAMS: 'true'
+      GOOGLE_SERVICE_KEY_FILE: /run/secrets/vertex.json
+      GOOGLE_CLOUD_PROJECT: cited-alpha-20260701
+      GOOGLE_LOC: global
+      SELECTION_MCP_KEY: ${SELECTION_MCP_KEY}
+      LIBRECHAT_TEMP_CREDENTIALS_PATH: /app/data/.env.temp
+    volumes:
+      - /srv/ashley/release/librechat.yaml:/app/librechat.yaml:ro
+      - /srv/ashley/runtime/vertex.json:/run/secrets/vertex.json:ro
+      - /srv/ashley/data/appdata:/app/data
+      - /srv/ashley/data/images:/app/client/public/images
+      - /srv/ashley/data/uploads:/app/uploads
+      - /srv/ashley/release/logo.svg:/app/client/dist/assets/logo.svg:ro
+      - /srv/ashley/release/icon.png:/app/client/dist/assets/ashley-icon.png:ro
+      - /srv/ashley/release/icon.png:/app/client/dist/assets/favicon-16x16.png:ro
+      - /srv/ashley/release/icon.png:/app/client/dist/assets/favicon-32x32.png:ro
+      - /srv/ashley/release/icon.png:/app/client/dist/assets/apple-touch-icon-180x180.png:ro
+    depends_on:
+      mongodb:
+        condition: service_started
+      meilisearch:
+        condition: service_started
+      redis:
+        condition: service_started
+      selection-demo:
+        condition: service_started
+    restart: unless-stopped
+    logging: *logging
+  selection-demo:
+    image: ${ASHLEY_IMAGE:?Set fixed Ashley image digest}
+    command: ['node', '/app/services/selection-demo/server.mjs']
+    environment:
+      SELECTION_MCP_KEY: ${SELECTION_MCP_KEY}
+      DEMO_DB: /app/data/selection.sqlite
+      GOOGLE_CLOUD_PROJECT: cited-alpha-20260701
+    volumes:
+      - /srv/ashley/data/selection:/app/data
+    restart: unless-stopped
+    logging: *logging
+  mongodb:
+    image: mirror.gcr.io/library/mongo@sha256:098862b1339f031900ca66cf8fef799e616d6324fa41b9a263f2ec899552c1ef
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+    volumes:
+      - /srv/ashley/data/mongo:/data/db
+    restart: unless-stopped
+    logging: *logging
+  meilisearch:
+    image: mirror.gcr.io/getmeili/meilisearch@sha256:8b57fc3c7f46535ddef3828df1538465ac19d892eb57c9a10da6df0880bd5856
+    environment:
+      MEILI_MASTER_KEY: ${MEILI_MASTER_KEY}
+      MEILI_NO_ANALYTICS: 'true'
+      MEILI_MAX_INDEXING_MEMORY: 512Mb
+    volumes:
+      - /srv/ashley/data/meili:/meili_data
+    restart: unless-stopped
+    logging: *logging
+  redis:
+    image: mirror.gcr.io/library/redis@sha256:bb186d083732f669da90be8b0f975a37812b15e913465bb14d845db72a4e3e08
+    command: ['redis-server', '--appendonly', 'yes', '--requirepass', '${REDIS_PASSWORD}']
+    volumes:
+      - /srv/ashley/data/redis:/data
+    restart: unless-stopped
+    logging: *logging
