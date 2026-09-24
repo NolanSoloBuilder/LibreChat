@@ -5,6 +5,8 @@ interface:
   fileSearch: false
   modelSelect: false
   sidebarConversationsOnly: true
+  marketplace:
+    use: true
 endpoints:
   agents:
     capabilities: [tools, actions, tool_intents]

@@ -13,7 +13,7 @@ CUSTOM_FOOTER=[Ashley](https://www.ashleyfurniture.com/) · Assortment Workspace
 
 将本目录 `librechat.yaml` 挂载到 `/app/librechat.yaml`。如果目标部署已有该配置，合并 `interface` 与 `modelSpecs`，不要覆盖既有工具或模型配置。
 
-客户试用版启用 `interface.sidebarConversationsOnly`，左侧只保留新建对话、历史记录和账号退出相关操作。云端 `deploy/ashley/compose.yaml` 固定 Ashley 页脚与帮助链接设置，避免未配置时回退到上游产品文案。
+客户试用版启用 `interface.sidebarConversationsOnly` 和 `interface.marketplace.use`，左侧保留新建对话、对话历史、智能体广场和账号退出相关操作。广场按当前账号的 Agent 查看权限列出已开放的 Agent；目前两个普通测试账号可查看 Ashley Assistant。云端 `deploy/ashley/compose.yaml` 固定 Ashley 页脚与帮助链接设置，避免未配置时回退到上游产品文案。
 
 当前本地实例在 `data/local-runtime/compose.yaml` 中使用只读挂载：
 
