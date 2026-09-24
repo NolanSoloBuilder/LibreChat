@@ -72,6 +72,10 @@ export default function useUnifiedSidebarLinks() {
       Component: ConversationsSection,
     };
 
+    if (interfaceConfig.sidebarConversationsOnly === true) {
+      return [conversationLink];
+    }
+
     if (
       !insightsFeatureEnabled ||
       (!isInsightsRoute && !isInsightsAccessLoading && insightsAccess?.access !== true)
@@ -97,6 +101,7 @@ export default function useUnifiedSidebarLinks() {
 
     return [conversationLink, ...nextLinks];
   }, [
+    interfaceConfig.sidebarConversationsOnly,
     insightsAccess?.access,
     insightsFeatureEnabled,
     isInsightsAccessLoading,

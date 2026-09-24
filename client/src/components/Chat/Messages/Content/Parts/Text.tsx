@@ -1,3 +1,4 @@
+import { getUIActionDisplayText } from '~/utils/uiActionPresentation';
 import { memo, useMemo, ReactElement } from 'react';
 import { useRecoilValue } from 'recoil';
 import MarkdownLite from '~/components/Chat/Messages/Content/MarkdownLite';
@@ -32,6 +33,8 @@ const TextPart = memo(function TextPart({ text, isCreatedByUser, showCursor }: T
   );
 
   const content: ContentType = useMemo(() => {
+    const actionSummary = isCreatedByUser ? getUIActionDisplayText(text) : null;
+    if (actionSummary) return <>{actionSummary}</>;
     if (!isCreatedByUser) {
       return <Markdown content={text} isLatestMessage={isLatestMessage} />;
     } else if (enableUserMsgMarkdown) {

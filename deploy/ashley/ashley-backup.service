@@ -1,0 +1,10 @@
+[Unit]
+Description=Back up Ashley trial state to GCS
+Requires=docker.service
+After=docker.service
+RequiresMountsFor=/srv/ashley
+
+[Service]
+Type=oneshot
+ExecStart=/srv/ashley/release/backup.sh
+TimeoutStartSec=1800

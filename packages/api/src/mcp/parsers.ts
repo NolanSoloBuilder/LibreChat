@@ -56,6 +56,7 @@ function assertImageDataWithinLimit(item: t.ImageContent): void {
 
 const RECOGNIZED_PROVIDERS = new Set([
   'google',
+  'vertexai',
   'anthropic',
   'openai',
   'azureopenai',
@@ -296,7 +297,9 @@ export function formatToolContent(
         }
       }
 
-      if (item.resource.uri.length) {
+      // A ui:// URI identifies the stored artifact, but cannot render it in a
+      // message. Keep only its renderable marker in model-facing tool text.
+      if (!isUiResource && item.resource.uri.length) {
         resourceText.push(`Resource URI: ${flattenMetadata(item.resource.uri)}`);
       }
       if (item.resource.mimeType != null && item.resource.mimeType) {

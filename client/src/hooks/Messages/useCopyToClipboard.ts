@@ -1,3 +1,4 @@
+import { getUIActionDisplayText } from '~/utils/uiActionPresentation';
 import { useCallback, useEffect, useMemo, useRef } from 'react';
 import copy from 'copy-to-clipboard';
 import { useRecoilValue } from 'recoil';
@@ -265,7 +266,14 @@ export function useCopyMessageToClipboard({
     variant,
   ]);
 
-  return useCopyToClipboard({ ...source, richText });
+  const actionSummary = isCreatedByUser
+    ? getUIActionDisplayText(getMessageParts(source).join('\n'))
+    : null;
+  return useCopyToClipboard({
+    ...source,
+    ...(actionSummary ? { text: actionSummary, content: undefined } : {}),
+    richText,
+  });
 }
 
 /**

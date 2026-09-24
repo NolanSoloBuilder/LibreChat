@@ -46,6 +46,7 @@ describe('formatToolContent', () => {
   describe('recognized providers', () => {
     const allProviders: t.Provider[] = [
       'google',
+      'vertexai',
       'anthropic',
       'openai',
       'azureopenai',
@@ -249,6 +250,16 @@ describe('formatToolContent', () => {
   });
 
   describe('resource handling', () => {
+    it('renders Vertex AI UI resources through markers and artifacts', () => {
+      const [content, artifacts] = formatToolContent({ content: [{
+        type: 'resource',
+        resource: { uri: 'ui://ashley-channel/evaluation/card', mimeType: 'text/html', text: '<p>Evidence</p>' },
+      }] }, 'vertexai');
+      expect(content).toContain('UI Resource Marker: \\ui{');
+      expect(content).not.toContain('Resource URI: ui://');
+      expect(artifacts?.ui_resources?.data).toHaveLength(1);
+    });
+
     it('should handle UI resources in artifacts', () => {
       const result: t.MCPToolCallResponse = {
         content: [
@@ -267,7 +278,7 @@ describe('formatToolContent', () => {
       expect(typeof content).toBe('string');
       expect(content).toContain('UI Resource ID:');
       expect(content).toContain('UI Resource Marker: \\ui{');
-      expect(content).toContain('Resource URI: ui://carousel');
+      expect(content).not.toContain('Resource URI: ui://carousel');
       expect(content).toContain('Resource MIME Type: application/json');
 
       const uiResourceArtifact = artifacts?.ui_resources?.data?.[0];
@@ -347,7 +358,7 @@ describe('formatToolContent', () => {
       expect(typeof content).toBe('string');
       expect(content).toContain('Some text');
       expect(content).toContain('UI Resource Marker: \\ui{');
-      expect(content).toContain('Resource URI: ui://button');
+      expect(content).not.toContain('Resource URI: ui://button');
       expect(content).toContain('Resource MIME Type: application/json');
       expect(content).toContain('Resource URI: file://data.csv');
 
@@ -380,7 +391,7 @@ describe('formatToolContent', () => {
       expect(typeof content).toBe('string');
       expect(content).toContain('Content with multimedia');
       expect(content).toContain('UI Resource Marker: \\ui{');
-      expect(content).toContain('Resource URI: ui://graph');
+      expect(content).not.toContain('Resource URI: ui://graph');
       expect(content).toContain('Resource MIME Type: application/json');
       expect(artifacts).toEqual({
         content: [
@@ -453,7 +464,7 @@ describe('formatToolContent', () => {
       expect(content).toContain('Middle section');
       expect(content).toContain('UI Resource ID:');
       expect(content).toContain('UI Resource Marker: \\ui{');
-      expect(content).toContain('Resource URI: ui://chart');
+      expect(content).not.toContain('Resource URI: ui://chart');
       expect(content).toContain('Resource MIME Type: application/json');
       expect(content).toContain('Resource URI: https://api.example.com/data');
       expect(content).toContain('Conclusion');

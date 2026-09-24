@@ -1,3 +1,4 @@
+import { getUIActionDisplayText } from '~/utils/uiActionPresentation';
 import { memo, Suspense, useMemo } from 'react';
 import { useRecoilValue } from 'recoil';
 import { Constants } from 'librechat-data-provider';
@@ -111,6 +112,8 @@ const DisplayMessage = ({ text, isCreatedByUser, message, showCursor }: TDisplay
   );
 
   const content = useMemo(() => {
+    const actionSummary = isCreatedByUser ? getUIActionDisplayText(text) : null;
+    if (actionSummary) return <>{actionSummary}</>;
     if (!isCreatedByUser) {
       return <Markdown content={text} isLatestMessage={isLatestMessage} />;
     }

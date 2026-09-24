@@ -1,0 +1,19 @@
+# Overlay for existing Compose stack; run from repository root.
+services:
+  api:
+    environment:
+      SELECTION_MCP_KEY: ${SELECTION_MCP_KEY:?Set an internal MCP key}
+  selection-demo:
+    image: ghcr.io/danny-avila/librechat@sha256:b07248d86e020c44101170bde2dbb4ab547df30dd223b4aacd6218cc90e8632b
+    user: '0:0'
+    entrypoint: ['node', '/app/services/selection-demo/server.mjs']
+    environment:
+      SELECTION_MCP_KEY: ${SELECTION_MCP_KEY:?Set an internal MCP key}
+      DEMO_DB: /data/selection.sqlite
+      DEMO_SUPPLY_FAILURE: ${DEMO_SUPPLY_FAILURE:-0}
+    volumes:
+      - ./services/selection-demo:/app/services/selection-demo:ro
+      - selection-demo:/data
+    restart: unless-stopped
+volumes:
+  selection-demo:

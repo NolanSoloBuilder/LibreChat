@@ -24,11 +24,16 @@ jest.mock('~/hooks', () => ({
 
 describe('Footer', () => {
   test('opens the default LibreChat site link in a new tab', () => {
-    render(<Footer startupConfig={null} />);
+    render(<Footer startupConfig={{}} />);
     const link = screen.getByRole('link', { name: /LibreChat/ });
     expect(link).toHaveAttribute('href', 'https://librechat.ai');
     expect(link).toHaveAttribute('target', '_blank');
     expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+  });
+
+  test('does not show the generic footer while startup configuration is loading', () => {
+    const { container } = render(<Footer startupConfig={null} />);
+    expect(container).toBeEmptyDOMElement();
   });
 
   test('opens custom footer markdown links in a new tab', () => {

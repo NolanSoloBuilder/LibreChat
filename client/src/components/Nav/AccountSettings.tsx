@@ -94,6 +94,7 @@ function AccountSettings({ collapsed = false }: { collapsed?: boolean }) {
   const localize = useLocalize();
   const { user, isAuthenticated, logout } = useAuthContext();
   const { data: startupConfig } = useGetStartupConfig();
+  const conversationsOnly = startupConfig?.interface?.sidebarConversationsOnly === true;
   const balanceQuery = useGetUserBalance({
     enabled: !!isAuthenticated && startupConfig?.balance?.enabled,
   });
@@ -151,24 +152,28 @@ function AccountSettings({ collapsed = false }: { collapsed?: boolean }) {
             <DropdownMenuSeparator />
           </>
         )}
-        <HelpSubmenu
-          helpAndFaqURL={startupConfig?.helpAndFaqURL}
-          termsOfServiceURL={startupConfig?.interface?.termsOfService?.externalUrl}
-          privacyPolicyURL={startupConfig?.interface?.privacyPolicy?.externalUrl}
-          onShowShortcuts={() => setShowShortcutsDialog(true)}
-        />
+        {!conversationsOnly && (
+          <HelpSubmenu
+            helpAndFaqURL={startupConfig?.helpAndFaqURL}
+            termsOfServiceURL={startupConfig?.interface?.termsOfService?.externalUrl}
+            privacyPolicyURL={startupConfig?.interface?.privacyPolicy?.externalUrl}
+            onShowShortcuts={() => setShowShortcutsDialog(true)}
+          />
+        )}
         <Menu.MenuItem onClick={() => setShowArchived(true)} className="select-item text-sm">
           <Archive className="icon-md" aria-hidden="true" />
           {localize('com_nav_archived_chats')}
         </Menu.MenuItem>
-        <Menu.MenuItem
-          onClick={() => setShowSettings(true)}
-          className="select-item text-sm"
-          data-testid="nav-settings"
-        >
-          <GearIcon className="icon-md" aria-hidden="true" />
-          {localize('com_nav_settings')}
-        </Menu.MenuItem>
+        {!conversationsOnly && (
+          <Menu.MenuItem
+            onClick={() => setShowSettings(true)}
+            className="select-item text-sm"
+            data-testid="nav-settings"
+          >
+            <GearIcon className="icon-md" aria-hidden="true" />
+            {localize('com_nav_settings')}
+          </Menu.MenuItem>
+        )}
         <DropdownMenuSeparator />
         <Menu.MenuItem onClick={() => logout()} className="select-item text-sm">
           <LogOut className="icon-md" aria-hidden="true" />

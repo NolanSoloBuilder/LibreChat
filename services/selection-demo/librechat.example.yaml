@@ -1,0 +1,23 @@
+# Reference only. The shared Ashley configuration is branding/ashley/librechat.yaml.
+endpoints:
+  agents:
+    capabilities: [tools, actions, tool_intents]
+    toolApproval:
+      enabled: true
+      mode: default
+      ask: ['save_pilot_draft_mcp_selection-demo']
+      allow: ['*_mcp_selection-demo']
+      reason: Confirm saving this simulated pilot draft. No listing or purchase order will be created.
+mcpServers:
+  selection-demo:
+    type: streamable-http
+    url: http://selection-demo:9970/mcp
+    requiresOAuth: false
+    headers:
+      Authorization: Bearer ${SELECTION_MCP_KEY}
+      X-User-Id: '{{LIBRECHAT_USER_ID}}'
+    timeout: 60000
+    initTimeout: 30000
+    serverInstructions: Selection performance and economics are simulated. Existing store-display records are read-only.
+mcpSettings:
+  allowedAddresses: ['selection-demo:9970']
