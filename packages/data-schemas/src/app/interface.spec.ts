@@ -3,6 +3,15 @@ import type { TCustomConfig } from 'librechat-data-provider';
 import { loadDefaultInterface } from './interface';
 
 describe('loadDefaultInterface', () => {
+  it('preserves the conversations-only sidebar setting', async () => {
+    const interfaceConfig = await loadDefaultInterface({
+      config: { interface: { sidebarConversationsOnly: true } },
+      configDefaults: getConfigDefaults(),
+    });
+
+    expect(interfaceConfig?.sidebarConversationsOnly).toBe(true);
+  });
+
   it('uses the schema default for URL auto-submit when not configured', async () => {
     const interfaceConfig = await loadDefaultInterface({
       config: {},
