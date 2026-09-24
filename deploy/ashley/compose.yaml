@@ -25,6 +25,8 @@ services:
     environment:
       HOST: 0.0.0.0
       NODE_ENV: production
+      CUSTOM_FOOTER: 'Ashley Assistant · Simulated business data'
+      HELP_AND_FAQ_URL: '/'
       MONGO_URI: mongodb://root:${MONGO_PASSWORD}@mongodb:27017/LibreChat?authSource=admin
       MEILI_HOST: http://meilisearch:7700
       REDIS_URI: redis://:${REDIS_PASSWORD}@redis:6379

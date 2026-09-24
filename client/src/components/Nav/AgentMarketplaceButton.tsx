@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { LayoutGrid } from 'lucide-react';
 import { Button, TooltipAnchor } from '@librechat/client';
 import { useLocalize, useShowMarketplace } from '~/hooks';
+import { useGetStartupConfig } from '~/data-provider';
 
 interface AgentMarketplaceButtonProps {
   /** Which way the tooltip opens: the desktop rail is a left edge, the mobile
@@ -19,8 +20,9 @@ export default function AgentMarketplaceButton({
 }: AgentMarketplaceButtonProps) {
   const localize = useLocalize();
   const showAgentMarketplace = useShowMarketplace();
+  const { data: startupConfig } = useGetStartupConfig();
 
-  if (!showAgentMarketplace) {
+  if (!showAgentMarketplace || startupConfig?.interface?.sidebarConversationsOnly === true) {
     return null;
   }
 

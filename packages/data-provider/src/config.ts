@@ -2026,6 +2026,8 @@ export const interfaceSchema = z
     customWelcome: z.string().optional(),
     mcpServers: mcpServersSchema.optional(),
     modelSelect: z.boolean().optional(),
+    /** Show only new chat and conversation history in the sidebar. */
+    sidebarConversationsOnly: z.boolean().optional(),
     parameters: z.boolean().optional(),
     multiConvo: z.boolean().optional(),
     bookmarks: z.boolean().optional(),

@@ -4,6 +4,7 @@ interface:
   customWelcome: Ask Ashley Assistant about the US marketplace pilot or anything else.
   fileSearch: false
   modelSelect: false
+  sidebarConversationsOnly: true
 endpoints:
   agents:
     capabilities: [tools, actions, tool_intents]
